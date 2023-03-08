@@ -28,7 +28,6 @@ public class SingleConnection {
 				conexao = DriverManager.getConnection(url, user, password);
 				// Define que as transações precisam ser confirmadas manualmente (não são confirmadas automaticamente)
 				conexao.setAutoCommit(false);
-				System.out.println("Conectou no banco de dados!");
 			}
 		} catch (Exception e) {
 			// Imprime o stack trace de qualquer exceção que ocorra

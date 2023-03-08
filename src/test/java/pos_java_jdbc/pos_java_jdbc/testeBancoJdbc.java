@@ -2,11 +2,15 @@ package pos_java_jdbc.pos_java_jdbc;
 
 import org.junit.Test;
 
-import conexaoJdbc.SingleConnection;
+import dao.UserPosJavaDao;
+import model.UserPosJava;
 
 public class testeBancoJdbc {
 	@Test
 	public void initBanco() {
-	SingleConnection.getConnection();
+		UserPosJavaDao userPosJavaDao = new UserPosJavaDao();
+		UserPosJava userPosJava = new UserPosJava();
+		
+		userPosJavaDao.salvar(userPosJava);
 	}
 }
